@@ -1,5 +1,5 @@
 name:                  murmur3
-version:               1.0.0
+version:               1.0.1
 synopsis:              
     Pure Haskell implementation of the MurmurHash3 x86_32 algorithm.
 description:
@@ -25,11 +25,11 @@ source-repository head
 library
     exposed-modules:   Data.Hash.Murmur
 
-    build-depends: base                     >= 4.6          && < 5 
-                 , bytestring                     >= 0.10       && < 0.11 
-                 , binary                   >= 0.7          && < 0.8 
+    build-depends: base                     >= 4.6        && < 5 
+                 , bytestring               >= 0.10       && < 0.11 
+                 , cereal                   >= 0.5.1      && < 0.5.2 
 
-    ghc-options:       -Wall 
+    ghc-options:       -Wall -Werror -O2
 
 test-suite test-murmur3
     type:              exitcode-stdio-1.0

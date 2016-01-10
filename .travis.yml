@@ -116,6 +116,7 @@ script:
     cabal configure --enable-tests -v2 &&
     $WORKDIR/travis/travis_long cabal build &&
     $WORKDIR/travis/travis_long cabal test && 
+    cabal check &&
     $WORKDIR/travis/travis_long cabal haddock && 
     cd .. && 
     cabal install "$SRC_TGZ"

@@ -1,5 +1,7 @@
 # Murmur3
 
+[![Build Status](https://travis-ci.org/plaprade/murmur3.svg?branch=master)](https://travis-ci.org/plaprade/murmur3)
+
 Pure Haskell implementation of the MurmurHash3 algorithm.
 
 ## Documentation

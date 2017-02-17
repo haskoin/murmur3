@@ -3,7 +3,7 @@ version:               1.0.3
 synopsis:              
     Pure Haskell implementation of the MurmurHash3 x86_32 algorithm.
 description:
-    MurmurHash3 is a non-cryptogrpahic hash function suitable for general
+    MurmurHash3 is a non-cryptographic hash function suitable for general
     hash-based lookup. We provide the x86_32 version which closely follows 
     the following implementation:
     <https://code.google.com/p/smhasher/source/browse/trunk/MurmurHash3.cpp>

@@ -16,13 +16,14 @@ author:                Philippe Laprade
 maintainer:            plaprade+hackage@gmail.com
 category:              Data, Hash, Murmur
 build-type:            Simple
-cabal-version:         >= 1.9.2
+cabal-version:         >= 1.10
 
 source-repository head
     type:     git
     location: git://github.com/haskoin/murmur3.git
 
 library
+    default-language:  Haskell98
     exposed-modules:   Data.Hash.Murmur
 
     build-depends: base                     >= 4.6 && < 5 
@@ -32,6 +33,7 @@ library
     ghc-options: -Wall
 
 test-suite test-murmur3
+    default-language:  Haskell98
     type:              exitcode-stdio-1.0
     main-is:           Main.hs
 

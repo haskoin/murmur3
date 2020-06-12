@@ -1,5 +1,5 @@
 name:                  murmur3
-version:               1.0.3
+version:               1.0.4
 synopsis:              
     Pure Haskell implementation of the MurmurHash3 x86_32 algorithm.
 description:
@@ -10,8 +10,8 @@ description:
 homepage:              http://github.com/plaprade/murmur3
 bug-reports:           http://github.com/plaprade/murmur3/issues
 stability:             stable
-license:               PublicDomain
-license-file:          UNLICENSE
+license:               MIT
+license-file:          LICENSE
 author:                Philippe Laprade
 maintainer:            plaprade+hackage@gmail.com
 category:              Data, Hash, Murmur

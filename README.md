@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/haskoin/murmur3.svg?branch=master)](https://travis-ci.org/haskoin/murmur3)
+
 # Murmur3
 
 Pure Haskell implementation of the MurmurHash3 algorithm.

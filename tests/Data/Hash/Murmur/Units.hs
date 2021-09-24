@@ -26,7 +26,7 @@ assertTestVector :: TestVector -> Assertion
 assertTestVector (expected, seed, str) =
     assertBool "    > MurmurHash3 " $ result == expected
   where
-    result = murmur3 seed (fst $ B16.decode $ C.pack str)
+    result = murmur3 seed (either error id $ B16.decode $ C.pack str)
 
 testVectors :: [TestVector]
 testVectors =

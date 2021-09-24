@@ -40,7 +40,7 @@ test-suite test-murmur3
     other-modules: Data.Hash.Murmur.Units
 
     build-depends: base                           >= 4.6 && < 5 
-                 , base16-bytestring              >= 0.1
+                 , base16-bytestring              >= 1.0
                  , bytestring                     >= 0.10
                  , murmur3
                  , HUnit                          >= 1.2

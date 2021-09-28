@@ -5,7 +5,7 @@ import Test.Framework (Test, testGroup)
 import Test.Framework.Providers.HUnit (testCase)
 
 import Data.Word (Word32)
-import qualified Data.ByteString.Base16 as B16 (decode)
+import qualified Data.ByteString.Base16 as B16 (decodeBase16Lenient)
 import qualified Data.ByteString.Char8 as C (pack)
 
 import Data.Hash.Murmur (murmur3)
@@ -14,7 +14,7 @@ type TestVector = (Word32, Word32, String)
 
 tests :: [Test]
 tests =
-    [ testGroup "MurmurHash3" 
+    [ testGroup "MurmurHash3"
         (map buildTest $ zip testVectors [0..])
     ]
 
@@ -26,7 +26,7 @@ assertTestVector :: TestVector -> Assertion
 assertTestVector (expected, seed, str) =
     assertBool "    > MurmurHash3 " $ result == expected
   where
-    result = murmur3 seed (fst $ B16.decode $ C.pack str)
+    result = murmur3 seed (B16.decodeBase16Lenient $ C.pack str)
 
 testVectors :: [TestVector]
 testVectors =

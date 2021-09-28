@@ -12,9 +12,6 @@ maintainer: Jean-Pierre Rupp
 category: Data, Hash, Murmur
 extra-source-files:
   - README.md
-ghc-options:
-  - -Wall
-  - -Werror
 dependencies:
   - base >= 4.6 && < 5
   - bytestring >= 0.10

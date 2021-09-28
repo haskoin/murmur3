@@ -1,54 +1,58 @@
-name:                  murmur3
-version:               1.0.5
-synopsis:              
-    Pure Haskell implementation of the MurmurHash3 x86 algorithm.
-description:
-    MurmurHash3 is a non-cryptographic hash function suitable for general
-    hash-based lookup. We provide the x86 version which closely follows 
-    the following implementation:
-    <https://code.google.com/p/smhasher/source/browse/trunk/MurmurHash3.cpp>
-homepage:              http://github.com/haskoin/murmur3
-bug-reports:           http://github.com/haskoin/murmur3/issues
-stability:             stable
-license:               MIT
-license-file:          LICENSE
-author:                Philippe Laprade
-maintainer:            Philippe Laprade, Jean-Pierre Rupp
-category:              Data, Hash, Murmur
-build-type:            Simple
-cabal-version:         >= 1.10
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           murmur3
+version:        1.0.5
+synopsis:       Pure Haskell implementation of the MurmurHash3 x86 algorithm
+description:    MurmurHash3 is a non-cryptographic hash function suitable for general hash-based lookup. We provide the x86 version which closely follows  the following implementation: <https://code.google.com/p/smhasher/source/browse/trunk/MurmurHash3.cpp>
+category:       Data, Hash, Murmur
+stability:      stable
+homepage:       https://github.com/haskoin/murmur3#readme
+bug-reports:    https://github.com/haskoin/murmur3/issues
+maintainer:     Jean-Pierre Rupp
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
 
 source-repository head
-    type:     git
-    location: git://github.com/haskoin/murmur3.git
+  type: git
+  location: https://github.com/haskoin/murmur3
 
 library
-    default-language:  Haskell98
-    exposed-modules:   Data.Hash.Murmur
-
-    build-depends: base                     >= 4.6 && < 5 
-                 , bytestring               >= 0.10       
-                 , cereal                   >= 0.5.1      
-
-    ghc-options: -Wall
+  exposed-modules:
+      Data.Hash.Murmur
+  other-modules:
+      Paths_murmur3
+  ghc-options: -Wall -Werror
+  build-depends:
+      base >=4.6 && <5
+    , bytestring >=0.10
+    , cereal >=0.5.1
+  default-language: Haskell2010
 
 test-suite test-murmur3
-    default-language:  Haskell98
-    type:              exitcode-stdio-1.0
-    main-is:           Main.hs
-
-    other-modules: Data.Hash.Murmur.Units
-
-    build-depends: base                           >= 4.6 && < 5 
-                 , base16                         >= 0.3.0.1
-                 , bytestring                     >= 0.10
-                 , murmur3
-                 , HUnit                          >= 1.2
-                 , QuickCheck                     >= 2.6
-                 , test-framework                 >= 0.8
-                 , test-framework-quickcheck2     >= 0.3
-                 , test-framework-hunit           >= 0.3
-
-    ghc-options: -Wall 
-    hs-source-dirs: tests
-
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Data.Hash.Murmur.Units
+      Paths_murmur3
+  hs-source-dirs:
+      tests
+  ghc-options: -Wall -Werror
+  build-depends:
+      HUnit
+    , QuickCheck
+    , base >=4.6 && <5
+    , base16
+    , bytestring
+    , cereal >=0.5.1
+    , murmur3
+    , test-framework
+    , test-framework-hunit
+    , test-framework-quickcheck2
+  default-language: Haskell2010

@@ -1,0 +1,36 @@
+name: murmur3
+version: 1.0.5
+synopsis: Pure Haskell implementation of the MurmurHash3 x86 algorithm
+description: >
+    MurmurHash3 is a non-cryptographic hash function suitable for general
+    hash-based lookup. We provide the x86 version which closely follows 
+    the following implementation:
+    <https://code.google.com/p/smhasher/source/browse/trunk/MurmurHash3.cpp>
+github: haskoin/murmur3
+stability: stable
+maintainer: Jean-Pierre Rupp
+category: Data, Hash, Murmur
+extra-source-files:
+  - README.md
+ghc-options:
+  - -Wall
+  - -Werror
+dependencies:
+  - base >= 4.6 && < 5
+  - bytestring >= 0.10
+  - cereal >= 0.5.1
+library:
+  exposed-modules: Data.Hash.Murmur
+tests:
+  test-murmur3:
+    source-dirs: tests
+    main: Main.hs
+    dependencies:
+      - murmur3
+      - base16
+      - bytestring
+      - HUnit
+      - QuickCheck
+      - test-framework
+      - test-framework-hunit
+      - test-framework-quickcheck2
